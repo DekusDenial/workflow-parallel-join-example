@@ -13,14 +13,14 @@ jobs:
         requires: [A]
     C:  
         steps:
-            - echo: echo test
+            - echo: sleep 30; echo test
         requires: [A]
     
     # D is triggered only if B and C both succeed
     D:
         steps:
             - echo: echo test && exit 1
-        requires: [B,C]
+        requires: [~B, ~C]
     E:
         steps:
             - echo: echo test
