@@ -19,7 +19,7 @@ jobs:
     # D is triggered only if B and C both succeed
     D:
         steps:
-            - echo: echo test
+            - echo: echo test && exit 1
         requires: [B,C]
     E:
         steps:
