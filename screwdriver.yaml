@@ -21,3 +21,7 @@ jobs:
         steps:
             - echo: echo test
         requires: [B,C]
+    E:
+        steps:
+            - echo: echo test
+        requires: [D]
